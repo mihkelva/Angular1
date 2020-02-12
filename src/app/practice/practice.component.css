@@ -1,0 +1,14 @@
+p {
+    background-color: lime;
+    transition: .4s ease-out; 
+    transition-delay: 0.2s;
+}
+
+p:hover {
+    background-color: lightblue;
+    transition-delay:0.4s ease-out;
+}
+
+.vanilla {
+    color: white;
+}

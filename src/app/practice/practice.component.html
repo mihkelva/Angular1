@@ -1,0 +1,26 @@
+<hr>
+<input 
+    type="text"
+    id="username-form"
+    (input)="changeUsername($event)"
+    >
+<button 
+    class="btn btn-success"
+    [disabled]="buttonDisabled"
+    (click)="setUsername()">Select as username</button>
+<br>
+<p>{{ userName }}</p>
+<hr>
+<p 
+*ngIf="passwordShown"
+>Secret password: 'Tuna'</p>
+<button 
+class="btn btn-success"
+(click)="passwordShown=!passwordShown"
+(click)="clicksCounter()"
+>Display details</button>
+<p 
+[ngStyle]="{'background-color': (clicks > 4) ? 'blue' : 'aqua'}" 
+[ngClass]="{'vanilla': (clicks > 4)}"
+*ngFor="let click of clicksArray">Number of clicks made: {{ clicks }}</p>
+<hr>
